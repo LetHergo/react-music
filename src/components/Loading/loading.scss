@@ -1,10 +1,11 @@
+@import '@styles/theme.scss';
 .loading-wrapper {
 	text-align: center;
 	.loading-svg {
-		fill: rgb(43, 188, 100);
+		fill: $loading-bg;
 	}
 	.loading-text {
-		color: #666;
+		color: $loading-color;
 		font-size: 14px;
 	}
 }

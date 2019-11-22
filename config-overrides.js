@@ -18,6 +18,7 @@ module.exports = override(
 			'@': path.resolve(__dirname, 'src'),
 			'@assets': path.resolve(__dirname, 'src/assets'),
 			'@comp': path.resolve(__dirname, 'src/components'),
+			'@styles': path.resolve(__dirname, 'src/styles'),
 			'@views': path.resolve(__dirname, 'src/views'),
 			'@api': path.resolve(__dirname, 'src/api'),
 			'@utils': path.resolve(__dirname, 'src/utils')

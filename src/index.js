@@ -5,10 +5,11 @@ import store from './store'
 import App from './App'
 import 'amfe-flexible'
 
-window.mmPlayer = `摸鱼听歌
-作者：易只照彦
+import '@/styles/index.scss'
+
+window.yPlayer = `摸鱼听歌
 歌曲来源于网易云音乐 (http://music.163.com)`
-console.info(`%c${window.mmPlayer}`, `color:#fff`)
+console.info(`%c${window.yPlayer}`, `color:#fff`)
 ReactDOM.render(
 	<Provider store={store}>
 		<App />

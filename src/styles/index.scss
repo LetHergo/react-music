@@ -1,0 +1,32 @@
+@import 'theme.scss';
+@import 'utils.scss';
+
+// 设置全局动态属性可以防止它们在局部被覆
+:root {
+	--THEME: var(--USER-THEME-COLOR, #e5473c);
+	--THEME-COLOR: var(--USER-THEME-COLOR, #e5473c);
+}
+
+#root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.y-block {
+	display: block !important;
+}
+
+.y-none {
+	display: none !important;
+}
+
+.translate-enter {
+	transform: translate3d(100%, 0, 0);
+	&.translate-enter-active {
+		transition: transform 0.3s;
+		transform: translate3d(0, 0, 0);
+	}
+}
