@@ -2,25 +2,13 @@ import React, { Component, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Loading from '@comp/Loading'
-import HomeHeader from '@comp/HomeHeader'
+import HomeHeader from '@comp/HomeHeader/homeHead'
 const Home = lazy(() => import('@views/Home'))
 class App extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			//是否打开抽屉
-			showDrawer: false
-		}
-	}
-	openDrawer = state => {
-		this.setState({
-			showDrawer: state
-		})
-	}
 	render() {
 		return (
 			<Router>
-				<HomeHeader onOpen={this.openDrawer} />
+				<HomeHeader />
 				<main className='y-main'>
 					<Suspense fallback={<Loading />}>
 						<Switch>

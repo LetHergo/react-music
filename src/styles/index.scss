@@ -1,7 +1,6 @@
 @import 'theme.scss';
 @import 'utils.scss';
-
-// 设置全局动态属性可以防止它们在局部被覆
+// 设置全局动态属性可以防止它们在局部被覆:
 :root {
 	--THEME: var(--USER-THEME-COLOR, #e5473c);
 	--THEME-COLOR: var(--USER-THEME-COLOR, #e5473c);
@@ -13,6 +12,9 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
+}
+.iconfont {
+	font-size: $font-size-small-sss;
 }
 
 .y-block {

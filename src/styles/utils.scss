@@ -15,6 +15,13 @@
 	-webkit-box-orient: vertical;
 }
 
+//flex布局
+@mixin y-flexs($align: flex-start, $just: flex-start) {
+	display: flex;
+	align-items: $align;
+	justify-content: $just;
+}
+
 //图片
 @mixin img-full($attr: cover) {
 	width: 100%;
