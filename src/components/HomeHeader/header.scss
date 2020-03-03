@@ -1,8 +1,14 @@
 @import '@/styles/index.scss';
 .y-home-head {
-	padding: 10px 0;
 	position: relative;
 	color: #fff;
 	background-color: $nav-bg;
-	@include y-flexs($align: center, $just: space-around);
+	height: 50px;
+	padding: 0 14px;
+	.icon-Music{
+		flex: 1;
+		@include y-flexs($align: center,$just:center);
+	}
+
+	@include y-flexs($align: center);
 }

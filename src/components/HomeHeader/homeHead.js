@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Drawer from '@comp/Drawer/'
+import Items from '@comp/Items/'
 import './header.scss'
 
 export default class HomeHead extends Component {
@@ -19,15 +20,17 @@ export default class HomeHead extends Component {
 	render() {
 		return (
 			<div className='y-home-head'>
-				<div
+				<i
 					className='iconfont icon-duosetubiao'
 					onClick={() => {
 						this.openDrawer(true)
 					}}
-				></div>
-				<div>摸鱼听歌</div>
-				<div className='iconfont icon-Music'></div>
-				<Drawer showDrawer={this.state.showDrawer} openFlag={this.openDrawer}></Drawer>
+				></i>
+				<i className='iconfont icon-Music'></i>
+
+				<i className='iconfont icon-search'></i>
+				<Drawer showDrawer={this.state.showDrawer} sidebar={Items}  openFlag={this.openDrawer}>
+				</Drawer>
 			</div>
 		)
 	}
