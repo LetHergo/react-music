@@ -1,5 +1,11 @@
-const { override, addWebpackResolve, fixBabelImports, addPostcssPlugins } = require('customize-cra')
-const path = require('path')
+const {
+	override,
+	addWebpackResolve,
+	fixBabelImports,
+	addPostcssPlugins,
+	adjustStyleLoaders
+} = require('customize-cra');
+const path = require('path');
 module.exports = override(
 	fixBabelImports('import', {
 		libraryName: 'antd-mobile',
@@ -23,5 +29,15 @@ module.exports = override(
 			'@api': path.resolve(__dirname, 'src/api'),
 			'@utils': path.resolve(__dirname, 'src/utils')
 		}
+	}),
+	adjustStyleLoaders(loader => {
+		if (loader.test.toString().includes('scss')) {
+			loader.use.push({
+				loader: 'sass-resources-loader',
+				options: {
+					resources: path.resolve(__dirname, './src/styles/index.scss') //全局引入公共的scss 文件
+				}
+			});
+		}
 	})
-)
+);

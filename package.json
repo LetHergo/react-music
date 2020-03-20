@@ -7,16 +7,17 @@
 		"antd-mobile": "^2.3.1",
 		"axios": "^0.19.0",
 		"classnames": "^2.2.6",
-		"customize-cra": "^0.8.0",
+		"customize-cra": "^0.9.1",
 		"node-sass": "^4.12.0",
 		"react": "^16.10.2",
-		"react-app-rewired": "^2.1.4",
+		"react-app-rewired": "^2.1.5",
 		"react-dom": "^16.10.2",
 		"react-redux": "^7.1.1",
 		"react-router-dom": "^5.1.2",
-		"react-scripts": "3.2.0",
+		"react-scripts": "3.4.0",
 		"redux": "^4.0.4",
-		"redux-thunk": "^2.3.0"
+		"redux-thunk": "^2.3.0",
+		"sass-resources-loader": "^2.0.1"
 	},
 	"scripts": {
 		"start": "react-app-rewired start",
@@ -41,6 +42,6 @@
 	},
 	"devDependencies": {
 		"babel-plugin-import": "^1.12.2",
-		"postcss-pxtorem": "^4.0.1"
+		"postcss-pxtorem": "^5.1.1"
 	}
 }

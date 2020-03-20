@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+// import Swipe from '@comp/Swipe';
 export default class index extends Component {
 	// state = {
 	// 	foo: 1
@@ -23,6 +23,11 @@ export default class index extends Component {
 	// 	}, 0)
 	// }
 	render() {
-		return <div>home</div>
+		return (
+			<div>
+				111
+				{/* <Swipe></Swipe> */}
+			</div>
+		);
 	}
 }
