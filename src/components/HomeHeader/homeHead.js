@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Drawer from '@comp/Drawer/'
-import Items from '@comp/Items/'
+import Drawer from '@/components/Drawer/'
+import Items from '@/components/Items/'
 import './header.scss'
 
 export default class HomeHead extends Component {

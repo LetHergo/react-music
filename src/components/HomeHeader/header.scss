@@ -3,8 +3,8 @@
 	position: relative;
 	color: #fff;
 	background-color: $nav-bg;
-	height: 50px;
-	padding: 0 14px;
+	// height: 50px;
+	padding: 14px;
 	.icon-Music{
 		flex: 1;
 		@include y-flexs($align: center,$just:center);

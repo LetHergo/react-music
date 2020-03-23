@@ -13,8 +13,18 @@
 	bottom: 0;
 	right: 0;
 }
+.y-container{
+	height:100%;
+	display: flex;
+	flex-direction: column;
+}
+.y-main{
+	overflow-y:auto;
+	background: #fff;
+}
+
 .iconfont {
-	font-size: $font-size-small-sss;
+	font-size: $font-size-small;
 }
 
 .y-block {

@@ -1,22 +1,25 @@
 import React, { Component, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
-import Loading from '@comp/Loading'
-import HomeHeader from '@comp/HomeHeader/homeHead'
-const Home = lazy(() => import('@views/Home'))
+import Loading from '@/components/Loading'
+import HomeHeader from '@/components/HomeHeader/homeHead'
+const Home = lazy(() => import('@/views/Home/home.js'))
 class App extends Component {
 	render() {
 		return (
 			<Router>
-				<HomeHeader />
-				<main className='y-main'>
-					<Suspense fallback={<Loading />}>
-						<Switch>
-							<Route path='/home' component={Home} />
-							<Redirect to='/home' />
-						</Switch>
-					</Suspense>
-				</main>
+				<div className='y-container'>
+					<HomeHeader />
+					<main className='y-main'>
+						<Suspense fallback={<Loading />}>
+							<Switch>
+								<Route path='/home' component={Home} />
+								<Redirect to='/home' />
+							</Switch>
+						</Suspense>
+					</main>
+				</div>
+
 				{/* {this.props.showPlayer && <Player />} */}
 			</Router>
 		)

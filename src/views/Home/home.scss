@@ -1,0 +1,15 @@
+.am-tabs-default-bar-tab-active {
+	color: $slide-dot-active;
+}
+.am-tabs-default-bar-underline {
+	border-color: $slide-dot-active;
+}
+
+.home-title{
+	display: flex;
+	align-items: center;
+	margin-top:10px;
+	font-size:16px;
+	color:#333;
+	margin-left:5px;
+}

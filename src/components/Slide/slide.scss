@@ -1,5 +1,13 @@
 // @import '@styles/theme.scss';
 
+.slider-slide > img{
+  display: inline-block;
+  height:134px;
+  width:100%;
+  max-width: 100%;
+  object-fit:cover
+}
+
 .am-carousel-wrap-dot.am-carousel-wrap-dot-active>span{
   background-color: $slide-dot-active;
 }
