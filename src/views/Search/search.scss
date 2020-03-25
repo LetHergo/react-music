@@ -1,0 +1,25 @@
+.y-search {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.y-search-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+.y-search-main {
+	display: none;
+	background-color: #fff;
+}
+.y-search-show {
+	display: block;
+}
+.am-search-cancel {
+	color: $theme-color;
+}
+.am-tabs-default-bar-tab-active {
+	color: $slide-dot-active;
+}
+.am-tabs-default-bar-underline {
+	border-color: $slide-dot-active;
+}

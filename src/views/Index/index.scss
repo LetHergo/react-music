@@ -1,0 +1,10 @@
+.y-index{
+  display: flex;
+  height:100%;
+	flex-direction: column;
+}
+.y-main{
+  flex:1;
+	overflow: hidden;
+	background: #fff;
+}

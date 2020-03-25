@@ -1,23 +1,21 @@
 import React, { Component, lazy, Suspense } from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Loading from '@/components/Loading'
-import HomeHeader from '@/components/HomeHeader/homeHead'
-const Home = lazy(() => import('@/views/Home/home.js'))
+const Index = lazy(() => import('@/views/Index/index.js'))
+const Search = lazy(() => import('@/views/Search/search.js'))
 class App extends Component {
 	render() {
 		return (
 			<Router>
 				<div className='y-container'>
-					<HomeHeader />
-					<main className='y-main'>
-						<Suspense fallback={<Loading />}>
-							<Switch>
-								<Route path='/home' component={Home} />
-								<Redirect to='/home' />
-							</Switch>
-						</Suspense>
-					</main>
+					<Suspense fallback={<Loading />}>
+						<Switch>
+							<Route exact path='/' component={Index} />
+							<Route path='/search' component={Search} />
+							{/* <Redirect to='/' /> */}
+						</Switch>
+					</Suspense>
 				</div>
 
 				{/* {this.props.showPlayer && <Player />} */}

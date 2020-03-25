@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Toast } from 'antd-mobile'
 // create an axios instance
 const service = axios.create({
-	baseURL: 'http://localhost:4000', // url = base url + request url
+	baseURL: 'http://localhost:3000', // url = base url + request url
 	withCredentials: true, // send cookies when cross-domain requests
 	timeout: 20000 // request timeout
 })

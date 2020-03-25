@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Drawer from '@/components/Drawer/'
 import Items from '@/components/Items/'
+import {  withRouter } from 'react-router-dom'
 import './header.scss'
 
-export default class HomeHead extends Component {
+class HomeHead extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -17,6 +18,9 @@ export default class HomeHead extends Component {
 			showDrawer: state
 		})
 	}
+	goSearch = () => {
+		this.props.history.push('/search')
+	}
 	render() {
 		return (
 			<div className='y-home-head'>
@@ -28,10 +32,11 @@ export default class HomeHead extends Component {
 				></i>
 				<i className='iconfont icon-Music'></i>
 
-				<i className='iconfont icon-search'></i>
-				<Drawer showDrawer={this.state.showDrawer} sidebar={Items}  openFlag={this.openDrawer}>
-				</Drawer>
+				<i className='iconfont icon-search' onClick={this.goSearch}></i>
+				<Drawer showDrawer={this.state.showDrawer} sidebar={Items} openFlag={this.openDrawer}></Drawer>
 			</div>
 		)
 	}
 }
+
+export default withRouter(HomeHead)

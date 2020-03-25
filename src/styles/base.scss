@@ -15,13 +15,8 @@
 }
 .y-container{
 	height:100%;
-	display: flex;
-	flex-direction: column;
 }
-.y-main{
-	overflow-y:auto;
-	background: #fff;
-}
+
 
 .iconfont {
 	font-size: $font-size-small;
