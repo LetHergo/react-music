@@ -42,7 +42,6 @@ export default class index extends Component {
 	render() {
 		return (
 			<div className='home-wrapper' style={{ height: '100%' }}>
-				{/* <Scroll  */}
 				<div>
 					{this.state.slideList.length > 0 && <Slide slideList={this.state.slideList}></Slide>}
 					<div className='home-main'>
@@ -58,8 +57,6 @@ export default class index extends Component {
 						</div>
 					</div>
 				</div>
-
-				{/* </Scroll> */}
 			</div>
 		)
 	}

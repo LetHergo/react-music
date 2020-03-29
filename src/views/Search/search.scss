@@ -10,6 +10,7 @@
 .y-search-main {
 	display: none;
 	background-color: #fff;
+	height:100%;
 }
 .y-search-show {
 	display: block;
@@ -22,4 +23,10 @@
 }
 .am-tabs-default-bar-underline {
 	border-color: $slide-dot-active;
+}
+.am-tabs-pane-wrap{
+	overflow: hidden;
+}
+.y-search-section{
+	height:100%;
 }

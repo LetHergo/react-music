@@ -5,6 +5,7 @@ import BScroll from 'better-scroll'
 
 import classnames from 'classnames'
 import MusicList from '@/components/MusicList/musiclist.js'
+import MusicListMore from '@/components/MusicMore/musicmore.js'
 
 import './search.scss'
 const tabs = [
@@ -20,37 +21,46 @@ export default class search extends Component {
 		value: '',
 		showTabs: false,
 		musicList: [],
-		collectionList: [],
-		searchType: 1
+		collectionList: []
+		// searchType: 1 
 	}
 	componentDidMount() {
 		this.autoFocusInst.focus()
 	}
+	componentWillUnmount() {
+		if (this.scroll) {
+			this.scroll.destroy()
+		}
+		if (this.scrollMore) {
+			this.scrollMore.destroy()
+		}
+	}
 	searchSubmit = value => {
 		this.setState({ value }, () => {
-			this.getData()
+			// 同时请求
+			this.getData(1)
+			this.getData(1000)
 		})
 	}
-	getData = () => {
-		const { value, searchType } = this.state
+	getData = type => {
+		const { value } = this.state
+		//1音乐 1000歌单 type
 		searchMusic({
 			keywords: value,
-			type: searchType
+			type
 		}).then(res => {
 			console.log(res.result)
-			if (searchType === 1) {
-        this.setState({ musicList: res.result.songs })
-        const wrapper = document.querySelector('.y-search-wrapper')
-        new BScroll(wrapper, {})
+			if (type === 1) {
+				const wrapper = document.querySelector('.y-search-music')
+				this.setState({ musicList: res.result.songs })
+				this.scroll = new BScroll(wrapper, {})
 			} else {
-        this.setState({ collectionList: res.result.songs })
-        
+				const wrapper = document.querySelector('.y-search-music-more')
+				this.setState({ collectionList: res.result.playlists })
+				this.scrollMore = new BScroll(wrapper, {})
 			}
 			this.setState({ showTabs: true })
 		})
-	}
-	onChange = value => {
-		this.setState({ value })
 	}
 	render() {
 		return (
@@ -66,11 +76,20 @@ export default class search extends Component {
 							'y-search-show': this.state.showTabs
 						})}
 					>
-						<Tabs tabs={tabs} initialPage={0}>
-							<div className='y-search-section'>
+						<Tabs
+							tabs={tabs}
+							initialPage={0}
+							swipeable={false}
+							useOnPan={false}
+							animated={false}
+							onTabClick={this.changeTab}
+						>
+							<div className='y-search-section y-search-music'>
 								<MusicList list={this.state.musicList}></MusicList>
 							</div>
-							<div className='y-search-section'>歌单=。=待更新</div>
+							<div className='y-search-section y-search-music-more'>
+								<MusicListMore list={this.state.collectionList}></MusicListMore>
+							</div>
 						</Tabs>
 					</div>
 				</div>

@@ -9,8 +9,8 @@ export default class Slide extends Component {
 		return (
 			<WingBlank>
 				<Carousel
-					autoplay={false}
-          infinite
+					autoplay
+					infinite
 					>
 					{this.props.slideList.map(item => (
 						<img src={item.imageUrl} alt={item.typeTitle} key={item.targetId} />

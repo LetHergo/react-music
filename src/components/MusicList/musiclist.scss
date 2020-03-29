@@ -1,21 +1,21 @@
-.y-music{
-  font-size:$font-size-small-s;
-  &-item{
-    padding:10px 5px;
-    color:#444;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 5px;
-    border-bottom:1px solid #eee;
-  }
-  &-left{
-    
-  }
-  &-name{
-    margin-bottom:10px;
-  }
-  &-author{
-    
-  }
+.y-music {
+	font-size: $font-size-small-s;
+	&-item {
+		padding: 10px 5px;
+		color: #444;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #eee;
+	}
+	&-left {
+	}
+	&-name {
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+	&-author {
+		font-size: 13px;
+	}
 }

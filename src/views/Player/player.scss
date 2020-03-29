@@ -1,0 +1,36 @@
+.y-player {
+
+	&-mini {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    color: #666;
+		&-left {
+			display: flex;
+			align-items: center;
+			font-size: 13px;
+			h2 {
+				margin-bottom: 10px;
+				color: #444;
+			}
+		}
+		&-img {
+			display: block;
+			height: 40px;
+			width: 40px;
+			border-radius: 5px;
+			margin-right: 8px;
+		}
+		&-right {
+			.iconfont {
+				font-size: 30px;
+			}
+			display: flex;
+			align-items: center;
+		}
+		&-control {
+			margin-right: 20px;
+		}
+	}
+}

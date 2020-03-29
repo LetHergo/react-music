@@ -1,0 +1,33 @@
+.y-music-more {
+	font-size: $font-size-small-s;
+	&-item {
+		padding: 10px 5px;
+		color: #444;
+		display: flex;
+		align-items: center;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #eee;
+	}
+	&-img {
+		height: 40px;
+		width: 40px;
+		border-radius: 5px;
+		display: block;
+		margin-right: 10px;
+	}
+	&-right {
+    flex:1;
+    overflow: hidden;
+	}
+	&-name {
+    font-size: 15px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+		margin-bottom: 10px;
+	}
+	&-author {
+    font-size: 13px;
+	}
+}
