@@ -25,7 +25,7 @@ class HomeHead extends Component {
 		return (
 			<div className='y-home-head'>
 				<i
-					className='iconfont icon-duosetubiao'
+					className='iconfont icon-zidingyi'
 					onClick={() => {
 						this.openDrawer(true)
 					}}
