@@ -29,7 +29,7 @@ module.exports = override(
 			loader.use.push({
 				loader: 'sass-resources-loader',
 				options: {
-					resources: path.resolve(__dirname, './src/styles/base.scss') //全局引入公共的scss 文件
+					resources: path.resolve(__dirname, './src/styles/theme.scss') //全局引入公共的scss 文件
 				}
 			});
 		}

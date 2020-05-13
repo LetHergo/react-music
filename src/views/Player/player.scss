@@ -1,11 +1,72 @@
 .y-player {
-
+	.circle_coninter{
+		position: absolute;
+	}
+	.circle_process {
+		position: relative;
+		margin: 0 auto;
+		width: 30px;
+		height: 30px;
+	}
+	.circle_process .wrapper {
+		width: 15px;
+		height: 30px;
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+	}
+	.circle_process .right {
+		right: 0;
+	}
+	.circle_process .left {
+		left: 0;
+	}
+	.circle_process .circle {
+		box-sizing: border-box;
+		width: 30px;
+		height: 30px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		transform: rotate(-135deg);
+	}
+	.circle_process .rightcircle {
+		border-top: 1px solid $theme-color;
+		border-right: 1px solid $theme-color;
+		right: 0;
+		animation: circle_right 5s linear infinite;
+	}
+	.circle_process .leftcircle {
+		border-bottom: 1px solid $theme-color;
+		border-left: 1px solid $theme-color;
+		left: 0;
+		animation: circle_left 5s linear infinite;
+	}
+	@keyframes circle_right {
+		0% {
+			transform: rotate(-135deg);
+		}
+		50%,
+		100% {
+			transform: rotate(45deg);
+		}
+	}
+	@keyframes circle_left {
+		0%,
+		50% {
+			transform: rotate(-135deg);
+		}
+		100% {
+			transform: rotate(45deg);
+		}
+	}
 	&-mini {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    color: #666;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px;
+		color: #666;
 		&-left {
 			display: flex;
 			align-items: center;
@@ -30,6 +91,7 @@
 			align-items: center;
 		}
 		&-control {
+			position: relative;
 			margin-right: 20px;
 		}
 	}

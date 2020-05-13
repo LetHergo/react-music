@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './player.scss'
 
 export default class player extends Component {
 	state = {
-		showStart: true
+		showStart: true,
 	}
 	changeStart = () => {
 		this.setState({
-			showStart: !this.state.showStart
+			showStart: !this.state.showStart,
 		})
+	}
+	componentDidMount(){
+		var rightcircle = this.refs.rightcircle
+		var leftcircle = this.refs.leftcircle
+
 	}
 	render() {
 		return (
@@ -27,6 +33,16 @@ export default class player extends Component {
 					</div>
 					<div className='y-player-mini-right'>
 						<div className='y-player-mini-control'>
+							<div className='circle_coninter'>
+								<div className='circle_process'>
+									<div className='wrapper right'>
+										<div className='circle rightcircle' ref='rightcircle'></div>
+									</div>
+									<div className='wrapper left'>
+										<div className='circle leftcircle' ref='leftcircle'></div>
+									</div>
+								</div>
+							</div>
 							{this.state.showStart === true ? (
 								<i className='iconfont icon-bofang' onClick={this.changeStart}></i>
 							) : (

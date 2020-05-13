@@ -15,7 +15,6 @@ class App extends Component {
 							<Switch>
 								<Route exact path='/' component={Index} />
 								<Route path='/search' component={Search} />
-								{/* <Redirect to='/' /> */}
 							</Switch>
 						</Suspense>
 					</div>
