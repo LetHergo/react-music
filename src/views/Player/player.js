@@ -5,7 +5,7 @@ import './player.scss'
 export default class player extends Component {
 	state = {
 		showStart: true,
-	}
+	}	
 	changeStart = () => {
 		this.setState({
 			showStart: !this.state.showStart,

@@ -1,11 +1,19 @@
 // @import '@styles/theme.scss';
 .loading-wrapper {
-	text-align: center;
+	height: 100%;
+
+	.loading-flex {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.loading-svg {
 		fill: $loading-bg;
 	}
 	.loading-text {
+		margin-left:10px;
 		color: $loading-color;
-		font-size: 14px;
+		font-size: $font-size-small-s;
 	}
 }

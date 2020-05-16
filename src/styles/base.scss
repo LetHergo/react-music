@@ -1,5 +1,4 @@
-@import 'theme.scss';
-@import 'utils.scss';
+@import 'index.scss';
 // 设置全局动态属性可以防止它们在局部被覆:
 :root {
 	--THEME: var(--USER-THEME-COLOR, #e5473c);

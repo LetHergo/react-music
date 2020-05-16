@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import store from './store'
 import App from './App'
+import './styles/base.scss'
 import 'amfe-flexible'
 
 window.yPlayer = `摸鱼听歌
